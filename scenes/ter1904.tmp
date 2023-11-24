@@ -65,6 +65,13 @@ texture = ExtResource("2_j7vfd")
 12: [0],
 "type": 0
 }
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/metadata/_better_terrain = {
+4: [0],
+"type": 0
+}
 4:0/0 = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
@@ -74,77 +81,6 @@ texture = ExtResource("2_j7vfd")
 6:0/0 = 0
 6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:0/0/physics_layer_0/angular_velocity = 0.0
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0/metadata/_better_terrain = {
-0: [0],
-4: [0],
-12: [0],
-"type": 0
-}
-0:2/0 = 0
-0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:2/0/physics_layer_0/angular_velocity = 0.0
-0:2/0/metadata/_better_terrain = {
-0: [0],
-12: [0],
-"type": 0
-}
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0/metadata/_better_terrain = {
-0: [0],
-8: [0],
-12: [0],
-"type": 0
-}
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/metadata/_better_terrain = {
-8: [0],
-12: [0],
-"type": 0
-}
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0/metadata/_better_terrain = {
-4: [0],
-8: [0],
-12: [0],
-"type": 0
-}
-4:1/0 = 0
-4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:1/0/physics_layer_0/angular_velocity = 0.0
-4:1/0/metadata/_better_terrain = {
-4: [0],
-"type": 0
-}
-3:2/0 = 0
-3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0/metadata/_better_terrain = {
-0: [0],
-"type": 0
-}
-4:3/0 = 0
-4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:3/0/physics_layer_0/angular_velocity = 0.0
-4:3/0/metadata/_better_terrain = {
-12: [0],
-"type": 0
-}
-5:2/0 = 0
-5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:2/0/physics_layer_0/angular_velocity = 0.0
-5:2/0/metadata/_better_terrain = {
-8: [0],
-"type": 0
-}
 
 [sub_resource type="TileSet" id="TileSet_rf7n8"]
 physics_layer_0/collision_layer = 1
