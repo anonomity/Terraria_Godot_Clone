@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://brykbrbbcdouh"]
+[gd_scene load_steps=16 format=3 uid="uid://brykbrbbcdouh"]
 
 [ext_resource type="Script" path="res://scritps/character.gd" id="1_cvc0e"]
 [ext_resource type="Texture2D" uid="uid://clmhkwaq52h6p" path="res://assets/Wizard_Default.png" id="2_ckjqa"]
-[ext_resource type="Texture2D" uid="uid://c42dqa2btjsbi" path="res://assets/pickaxe.png" id="3_dtaen"]
+[ext_resource type="Texture2D" uid="uid://s6c41idw7fl7" path="res://assets/Item_3491.png" id="3_1agdf"]
+[ext_resource type="PackedScene" uid="uid://b2x0hwc0eg06v" path="res://scenes/canvas_layer.tscn" id="4_iwbck"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_58tw6"]
 radius = 15.0
@@ -85,7 +86,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/path = NodePath("Node2D2/Node2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -97,7 +98,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D:visible")
+tracks/1/path = NodePath("Node2D2/Node2D:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -114,7 +115,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D/Sprite2D:position")
+tracks/0/path = NodePath("Node2D2/Node2D/Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -126,7 +127,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D/Sprite2D:rotation")
+tracks/1/path = NodePath("Node2D2/Node2D/Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -138,7 +139,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Node2D:rotation")
+tracks/2/path = NodePath("Node2D2/Node2D:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -150,7 +151,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Node2D:visible")
+tracks/3/path = NodePath("Node2D2/Node2D:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -166,7 +167,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:visible")
+tracks/0/path = NodePath("Node2D2/Node2D:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -182,6 +183,9 @@ _data = {
 "chop": SubResource("Animation_efaco"),
 "idle": SubResource("Animation_3hw3s")
 }
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iui14"]
+height = 41.9353
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(325, -382)
@@ -204,18 +208,31 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="Node2D" type="Node2D" parent="."]
-visible = false
-position = Vector2(1, -24)
-rotation = 1.775
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
-position = Vector2(3, -41)
-rotation = -0.726057
-scale = Vector2(2, 2)
-texture = ExtResource("3_dtaen")
-
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_vynse")
 }
+
+[node name="Node2D2" type="Node2D" parent="."]
+scale = Vector2(-1, 1)
+
+[node name="Node2D" type="Node2D" parent="Node2D2"]
+visible = false
+position = Vector2(1, -24)
+rotation = 1.775
+scale = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2/Node2D"]
+position = Vector2(3, -41)
+rotation = -0.726057
+texture = ExtResource("3_1agdf")
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/Area2D"]
+position = Vector2(3.49302, -46.3875)
+shape = SubResource("CapsuleShape2D_iui14")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_iwbck")]

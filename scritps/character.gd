@@ -11,6 +11,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player_2 = $AnimationPlayer2
 
+@onready var node_2d_2 = $Node2D2
+
+func _ready():
+	EventBus.have_sword.connect(on_sword_connect)
+	EventBus.have_pickaxe.connect(on_pickaxe_connect)
 
 func _physics_process(delta):
 	
@@ -37,6 +42,11 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("click"):
 		animation_player_2.play("chop")
+		var mouse = get_global_mouse_position()
+		if mouse.x > global_position.x:
+			node_2d_2.scale.x = 1
+		else:
+			node_2d_2.scale.x = -1
 	if Input.is_action_just_released("click"):
 		animation_player_2.play("idle")
 
@@ -45,3 +55,8 @@ func _physics_process(delta):
 		animation_player.play("jump")
 		velocity.y += gravity * delta
 	move_and_slide()
+
+func on_sword_connect():
+	pass
+func on_pickaxe_connect():
+	pass

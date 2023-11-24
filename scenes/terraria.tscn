@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://kw62opumwkfr"]
+[gd_scene load_steps=20 format=3 uid="uid://kw62opumwkfr"]
 
 [ext_resource type="Script" path="res://scritps/world_gen/world_gen.gd" id="1_sekn6"]
 [ext_resource type="Texture2D" uid="uid://doroin3s4nwup" path="res://assets/dirt_sprite_shit.png" id="2_j7vfd"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://byn8ikj37t1fg" path="res://assets/Background_171.png" id="4_7sb26"]
 [ext_resource type="Texture2D" uid="uid://c7yxpynqogu6y" path="res://assets/Background_277.png" id="5_hqabg"]
 [ext_resource type="Texture2D" uid="uid://c8cbefgmfw3tf" path="res://assets/Background_278.png" id="6_cbwcr"]
+[ext_resource type="PackedScene" uid="uid://c6wki80nckw05" path="res://scenes/zombie.tscn" id="8_64u04"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_g6b25"]
 
@@ -331,3 +332,11 @@ texture = ExtResource("6_cbwcr")
 offset = Vector2(-170, 150)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CharacterBody2D2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("8_64u04")]
+position = Vector2(1186, -86)
+player = NodePath("../CharacterBody2D")
+
+[node name="CharacterBody2D3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("8_64u04")]
+position = Vector2(1755, -53)
+player = NodePath("../CharacterBody2D")

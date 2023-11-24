@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2x0hwc0eg06v"]
+
+[ext_resource type="Script" path="res://scritps/canvas_layer.gd" id="1_es2wb"]
+[ext_resource type="StyleBox" uid="uid://dv0idhem4mnif" path="res://data/selected_panel.tres" id="1_syt55"]
+[ext_resource type="Texture2D" uid="uid://blfo2eijshsxk" path="res://assets/Item_3490.png" id="1_xaruh"]
+[ext_resource type="Texture2D" uid="uid://s6c41idw7fl7" path="res://assets/Item_3491.png" id="2_102pb"]
+[ext_resource type="StyleBox" uid="uid://bglpk8f6uwnyu" path="res://data/normal_panel.tres" id="3_w7ftn"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_es2wb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 135.0
+offset_bottom = 20.0
+color = Color(0.282353, 0.309804, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 126.0
+offset_bottom = 13.0
+
+[node name="Panel" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_syt55")
+
+[node name="sword" type="TextureRect" parent="ColorRect/HBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 8.0
+offset_bottom = 9.0
+texture = ExtResource("1_xaruh")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="sword" type="TextureRect" parent="ColorRect/HBoxContainer/Panel2"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 8.0
+offset_bottom = 9.0
+texture = ExtResource("2_102pb")
+expand_mode = 1
+
+[node name="Panel3" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="Panel4" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="Panel5" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="Panel6" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="Panel7" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="Panel8" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
+
+[node name="Panel9" type="Panel" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_w7ftn")
