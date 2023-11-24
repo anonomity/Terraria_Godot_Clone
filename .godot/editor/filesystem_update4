@@ -7,3 +7,4 @@ res://scenes/canvas_layer.tscn
 res://data/normal_panel.tres
 res://scritps/canvas_layer.gd
 res://scritps/EventBus.gd
+res://scritps/world_gen/world_gen.gd

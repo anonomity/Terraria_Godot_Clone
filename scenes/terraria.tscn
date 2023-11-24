@@ -290,8 +290,9 @@ format = 2
 layer_1/tile_data = PackedInt32Array()
 layer_2/tile_data = PackedInt32Array()
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_nuktr")]
+[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("tile_map") instance=ExtResource("3_nuktr")]
 position = Vector2(276, 2)
+tile_map = NodePath("../TileMap")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(2, -33)

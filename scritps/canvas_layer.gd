@@ -35,3 +35,5 @@ func update_panel():
 		EventBus.emit_signal("have_sword")
 	elif selected_panel == 1:
 		EventBus.emit_signal("have_pickaxe")
+	elif selected_panel == 2:
+		EventBus.emit_signal("have_dirt")

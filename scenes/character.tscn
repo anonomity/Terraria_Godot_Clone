@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scritps/character.gd" id="1_cvc0e"]
 [ext_resource type="Texture2D" uid="uid://clmhkwaq52h6p" path="res://assets/Wizard_Default.png" id="2_ckjqa"]
-[ext_resource type="Texture2D" uid="uid://s6c41idw7fl7" path="res://assets/Item_3491.png" id="3_1agdf"]
+[ext_resource type="Texture2D" uid="uid://blfo2eijshsxk" path="res://assets/Item_3490.png" id="3_vo8f2"]
 [ext_resource type="PackedScene" uid="uid://b2x0hwc0eg06v" path="res://scenes/canvas_layer.tscn" id="4_iwbck"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_58tw6"]
@@ -225,7 +225,7 @@ scale = Vector2(1, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Node2D2/Node2D"]
 position = Vector2(3, -41)
 rotation = -0.726057
-texture = ExtResource("3_1agdf")
+texture = ExtResource("3_vo8f2")
 
 [node name="Area2D" type="Area2D" parent="Node2D2/Node2D"]
 collision_layer = 2

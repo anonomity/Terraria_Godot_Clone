@@ -3,19 +3,32 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
-
+@onready var weapon_sprite = $Node2D2/Node2D/Sprite2D
+@export var tile_map  : TileMap
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const sword = preload("res://assets/Item_3490.png")
+
+const pickaxe = preload("res://assets/Item_3491.png")
 
 @onready var animation_player = $AnimationPlayer
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player_2 = $AnimationPlayer2
 
 @onready var node_2d_2 = $Node2D2
+var dirt_atlas = Vector2(1,0)
+var front_layer = 1
+var back_layer = 0
+
+enum TOOL_TYPE {SWORD, PICKAXE, DIRT, NONE}
+var current_tool = TOOL_TYPE.SWORD
 
 func _ready():
 	EventBus.have_sword.connect(on_sword_connect)
 	EventBus.have_pickaxe.connect(on_pickaxe_connect)
+	EventBus.have_dirt.connect(on_dirt_connect)
+	current_tool = TOOL_TYPE.SWORD
+	
 
 func _physics_process(delta):
 	
@@ -57,6 +70,27 @@ func _physics_process(delta):
 	move_and_slide()
 
 func on_sword_connect():
-	pass
+	weapon_sprite.texture = sword
+	current_tool = TOOL_TYPE.SWORD
+	
 func on_pickaxe_connect():
-	pass
+	weapon_sprite.texture = pickaxe
+	current_tool = TOOL_TYPE.PICKAXE
+
+func on_dirt_connect():
+	weapon_sprite.texture = null
+	current_tool = TOOL_TYPE.DIRT
+
+func _input(event):
+	if Input.is_action_just_pressed("click") and current_tool == TOOL_TYPE.PICKAXE:
+		var mouse_pos = get_global_mouse_position()
+		var tile_pos = tile_map.local_to_map(mouse_pos)
+		var index = BetterTerrain.get_cell(tile_map, front_layer, tile_pos)
+		if index != -1:
+			tile_map.erase_cell(front_layer, tile_pos)
+			#tile_arr.erase(tile_pos)
+			BetterTerrain.update_terrain_cell(tile_map, front_layer,tile_pos,true )
+	if Input.is_action_pressed("right_click")  and current_tool == TOOL_TYPE.DIRT:
+		var mouse_pos = get_global_mouse_position()
+		var tile_pos = tile_map.local_to_map(mouse_pos)
+		tile_map.set_cell(front_layer, tile_pos, 0,dirt_atlas)

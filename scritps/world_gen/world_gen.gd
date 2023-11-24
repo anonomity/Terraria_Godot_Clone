@@ -64,16 +64,4 @@ func _ready():
 	BetterTerrain.set_cells(tile_map, front_layer,ore_arr, 1)
 	BetterTerrain.update_terrain_cells(tile_map, front_layer,ore_arr,true )
 
-func _input(event):
-	if Input.is_action_just_pressed("click"):
-		var mouse_pos = get_global_mouse_position()
-		var tile_pos = tile_map.local_to_map(mouse_pos)
-		var index = BetterTerrain.get_cell(tile_map, front_layer, tile_pos)
-		if index != -1:
-			tile_map.erase_cell(front_layer, tile_pos)
-			#tile_arr.erase(tile_pos)
-			BetterTerrain.update_terrain_cell(tile_map, front_layer,tile_pos,true )
-	if Input.is_action_just_pressed("right_click"):
-		var mouse_pos = get_global_mouse_position()
-		var tile_pos = tile_map.local_to_map(mouse_pos)
-		tile_map.set_cell(front_layer, tile_pos, 0,dirt_atlas)
+
