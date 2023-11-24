@@ -1,5 +1,3 @@
-res://scenes/terrain_noise.tscn
-res://scritps/world_gen/world_gen.gd
 res://scenes/terraria.tscn
+res://scritps/world_gen/world_gen.gd
 res://scenes/character.tscn
-res://scritps/character.gd

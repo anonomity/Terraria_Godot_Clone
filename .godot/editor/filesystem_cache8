@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700838952
+::res://::1700839117
 icon.svg::CompressedTexture2D::1397265184065812894::1700835466::1700835470::1::::<><>::
 LICENSE.md::TextFile::-1::1700838952::0::1::::<><>::
 PC Computer - Terraria - Forest Tree.png::CompressedTexture2D::4247258142639949465::1700832217::1700835662::1::::<><>::
 README.md::TextFile::-1::1700838952::0::1::::<><>::
 terrarai.png::CompressedTexture2D::5858051606957161958::1700835719::1700835741::1::::<><>::
 ::res://addons/::1700838952
-::res://addons/better-terrain/::1700838952
+::res://addons/better-terrain/::1700838953
 BetterTerrain.gd::GDScript::-1::1700838952::0::1::::<>Node<>::
 BetterTerrainData.gd::GDScript::-1::1700838952::0::1::::<>RefCounted<>::
 icon.svg::CompressedTexture2D::7013481173950089383::1700838952::1700838953::1::::<><>::
@@ -22,7 +22,7 @@ TerrainProperties.gd::GDScript::-1::1700838952::0::1::::<>ConfirmationDialog<>::
 TerrainProperties.tscn::PackedScene::357726751365131127::1700838952::0::1::::<><>::res://addons/better-terrain/editor/TerrainProperties.gd<>uid://d1h1p7pcwdnjk::::res://addons/better-terrain/icons/MatchTiles.svg<>uid://dfemy1g6okwlv::::res://addons/better-terrain/icons/MatchVertices.svg<>uid://1yr6yruwl63u::::res://addons/better-terrain/icons/NonModifying.svg
 TerrainUndo.gd::GDScript::-1::1700838952::0::1::::<>Node<>::
 TileView.gd::GDScript::-1::1700838952::0::1::::<>Control<>::
-::res://addons/better-terrain/icons/::1700838952
+::res://addons/better-terrain/icons/::1700838953
 Decoration.svg::CompressedTexture2D::728146200744822825::1700838952::1700838953::1::::<><>::
 EditSymmetry.svg::CompressedTexture2D::5819885652813485422::1700838952::1700838953::1::::<><>::
 EditTerrain.svg::CompressedTexture2D::3424941343238122335::1700838952::1700838953::1::::<><>::
@@ -41,7 +41,7 @@ SymmetryRotateAll.svg::CompressedTexture2D::4644234494691419488::1700838952::170
 SymmetryRotateClockwise.svg::CompressedTexture2D::2434343766924226313::1700838952::1700838953::1::::<><>::
 SymmetryRotateCounterClockwise.svg::CompressedTexture2D::6039646614752542611::1700838952::1700838953::1::::<><>::
 Warning.svg::CompressedTexture2D::4150541877353778839::1700838952::1700838953::1::::<><>::
-::res://addons/better-terrain/icons/paint-symmetry/::1700838952
+::res://addons/better-terrain/icons/paint-symmetry/::1700838953
 SymmetryAll.svg::CompressedTexture2D::578261579705196512::1700838952::1700838953::1::::<><>::
 SymmetryFlip.svg::CompressedTexture2D::3615622518971111208::1700838952::1700838953::1::::<><>::
 SymmetryMirror.svg::CompressedTexture2D::8224266660976309009::1700838952::1700838953::1::::<><>::
@@ -51,10 +51,10 @@ SymmetryRotateAll.svg::CompressedTexture2D::2548945952901972738::1700838952::170
 SymmetryRotateClockwise.svg::CompressedTexture2D::7451866298790438917::1700838952::1700838953::1::::<><>::
 SymmetryRotateCounterClockwise.svg::CompressedTexture2D::925101722161386425::1700838952::1700838953::1::::<><>::
 ::res://assets/::1700838670
-dirt_sprite_shit.png::CompressedTexture2D::1057616551489460099::1700838665::1700838670::1::::<><>::
-::res://scenes/::1700838899
+dirt_sprite_shit.png::CompressedTexture2D::1057616551489460099::1700839325::1700839329::1::::<><>::
+::res://scenes/::1700839092
 character.tscn::PackedScene::3629785941848655487::1700838763::0::1::::<><>::res://scritps/character.gd
-terraria.tscn::PackedScene::749235949605420691::1700838899::0::1::::<><>::res://scritps/world_gen/world_gen.gd<>uid://pck14lo1u332::::res://assets/dirt_sprite_shit.png<>uid://brykbrbbcdouh::::res://scenes/character.tscn
+terraria.tscn::PackedScene::749235949605420691::1700839092::0::1::::<><>::res://scritps/world_gen/world_gen.gd<>uid://pck14lo1u332::::res://assets/dirt_sprite_shit.png<>uid://brykbrbbcdouh::::res://scenes/character.tscn
 ::res://scritps/::1700838042
 character.gd::GDScript::-1::1700838042::0::1::::<>CharacterBody2D<>::
 ::res://scritps/world_gen/::1700838899
