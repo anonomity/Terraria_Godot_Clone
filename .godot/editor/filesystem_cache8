@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700839117
+::res://::1700844640
 icon.svg::CompressedTexture2D::1397265184065812894::1700835466::1700835470::1::::<><>::
 LICENSE.md::TextFile::-1::1700838952::0::1::::<><>::
 PC Computer - Terraria - Forest Tree.png::CompressedTexture2D::4247258142639949465::1700832217::1700835662::1::::<><>::
@@ -50,12 +50,18 @@ SymmetryRotate180.svg::CompressedTexture2D::6600547332824561923::1700838952::170
 SymmetryRotateAll.svg::CompressedTexture2D::2548945952901972738::1700838952::1700838953::1::::<><>::
 SymmetryRotateClockwise.svg::CompressedTexture2D::7451866298790438917::1700838952::1700838953::1::::<><>::
 SymmetryRotateCounterClockwise.svg::CompressedTexture2D::925101722161386425::1700838952::1700838953::1::::<><>::
-::res://assets/::1700838670
-dirt_sprite_shit.png::CompressedTexture2D::1057616551489460099::1700839325::1700839329::1::::<><>::
-::res://scenes/::1700839092
-character.tscn::PackedScene::3629785941848655487::1700838763::0::1::::<><>::res://scritps/character.gd
-terraria.tscn::PackedScene::749235949605420691::1700839092::0::1::::<><>::res://scritps/world_gen/world_gen.gd<>uid://pck14lo1u332::::res://assets/dirt_sprite_shit.png<>uid://brykbrbbcdouh::::res://scenes/character.tscn
-::res://scritps/::1700838042
-character.gd::GDScript::-1::1700838042::0::1::::<>CharacterBody2D<>::
-::res://scritps/world_gen/::1700838899
-world_gen.gd::GDScript::-1::1700838899::0::1::::<>Node2D<>::
+::res://assets/::1700845017
+Background_171.png::CompressedTexture2D::4099808329373660656::1700841569::1700842389::1::::<><>::
+Background_277.png::CompressedTexture2D::7069853989031671510::1700841570::1700842389::1::::<><>::
+Background_278.png::CompressedTexture2D::7093270095556158075::1700841570::1700842389::1::::<><>::
+dirt_sprite_shit.png::CompressedTexture2D::8177865334995946375::1700844065::1700844067::1::::<><>::
+pickaxe.png::CompressedTexture2D::6864266797710452554::1700845017::1700845026::1::::<><>::
+Wizard_Default.png::CompressedTexture2D::5570135213623520257::1700843305::1700843306::1::::<><>::
+::res://music/::1700844710
+::res://scenes/::1700844713
+character.tscn::PackedScene::3629785941848655487::1700844087::0::1::::<><>::res://scritps/character.gd<>uid://clmhkwaq52h6p::::res://assets/Wizard_Default.png
+terraria.tscn::PackedScene::749235949605420691::1700844713::0::1::::<><>::res://scritps/world_gen/world_gen.gd<>uid://doroin3s4nwup::::res://assets/dirt_sprite_shit.png<>uid://brykbrbbcdouh::::res://scenes/character.tscn<>uid://byn8ikj37t1fg::::res://assets/Background_171.png<>uid://c7yxpynqogu6y::::res://assets/Background_277.png<>uid://c8cbefgmfw3tf::::res://assets/Background_278.png
+::res://scritps/::1700843929
+character.gd::GDScript::-1::1700843929::0::1::::<>CharacterBody2D<>::
+::res://scritps/world_gen/::1700841888
+world_gen.gd::GDScript::-1::1700841888::0::1::::<>Node2D<>::

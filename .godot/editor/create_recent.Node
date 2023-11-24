@@ -1,3 +1,9 @@
+AnimationPlayer
+Sprite2D
+Node2D
+AudioStreamPlayer2D
+ParallaxLayer
+ParallaxBackground
 CollisionShape2D
 ColorRect
 CharacterBody2D
