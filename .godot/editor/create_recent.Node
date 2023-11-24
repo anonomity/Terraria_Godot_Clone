@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 TextureRect
 Panel
 ColorRect
@@ -11,5 +12,3 @@ NavigationAgent2D
 AnimationPlayer
 Sprite2D
 CharacterBody2D
-ParallaxLayer
-AudioStreamPlayer2D

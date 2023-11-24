@@ -1,10 +1,5 @@
-res://scenes/terraria.tscn
-res://scenes/character.tscn
 res://scenes/zombie.tscn
 res://scritps/zombie.gd
-res://scritps/character.gd
+res://scenes/terraria.tscn
+res://scenes/character.tscn
 res://scenes/canvas_layer.tscn
-res://data/normal_panel.tres
-res://scritps/canvas_layer.gd
-res://scritps/EventBus.gd
-res://scritps/world_gen/world_gen.gd

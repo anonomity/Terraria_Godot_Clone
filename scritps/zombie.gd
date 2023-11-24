@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var player : CharacterBody2D
 
 @onready var sprite_2d = $Sprite2D
+@onready var ow = $ow
+@onready var death_sound = $death
 
 
 var speed = 100
@@ -35,4 +37,17 @@ func _physics_process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	pass
+	
+	health -= 20
+	if health <= 0:
+		death()
+	else:
+		ow.play()
+
+func death():
+	death_sound.play()
+	await get_tree().create_timer(0.4)
+	queue_free()
+
+
+

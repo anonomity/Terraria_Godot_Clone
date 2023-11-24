@@ -220,7 +220,6 @@ scale = Vector2(-1, 1)
 visible = false
 position = Vector2(1, -24)
 rotation = 1.775
-scale = Vector2(1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D2/Node2D"]
 position = Vector2(3, -41)

@@ -48,6 +48,7 @@ layout_mode = 2
 theme_override_styles/panel = ExtResource("3_w7ftn")
 
 [node name="sword" type="TextureRect" parent="ColorRect/HBoxContainer/Panel2"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
 offset_right = 8.0
@@ -61,6 +62,7 @@ layout_mode = 2
 theme_override_styles/panel = ExtResource("3_w7ftn")
 
 [node name="sword" type="TextureRect" parent="ColorRect/HBoxContainer/Panel3"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
 offset_right = 8.0

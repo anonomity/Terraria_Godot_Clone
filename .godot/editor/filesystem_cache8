@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700852442
+::res://::1700858446
 icon.svg::CompressedTexture2D::1397265184065812894::1700835466::1700835470::1::::<><>::
 LICENSE.md::TextFile::-1::1700838952::0::1::::<><>::
 PC Computer - Terraria - Forest Tree.png::CompressedTexture2D::4247258142639949465::1700832217::1700835662::1::::<><>::
@@ -50,7 +50,7 @@ SymmetryRotate180.svg::CompressedTexture2D::6600547332824561923::1700838952::170
 SymmetryRotateAll.svg::CompressedTexture2D::2548945952901972738::1700838952::1700838953::1::::<><>::
 SymmetryRotateClockwise.svg::CompressedTexture2D::7451866298790438917::1700838952::1700838953::1::::<><>::
 SymmetryRotateCounterClockwise.svg::CompressedTexture2D::925101722161386425::1700838952::1700838953::1::::<><>::
-::res://assets/::1700855144
+::res://assets/::1700855146
 Background_122.png::CompressedTexture2D::3489389272554494538::1700847956::1700847956::1::::<><>::
 Background_171.png::CompressedTexture2D::4099808329373660656::1700841569::1700842389::1::::<><>::
 Background_277.png::CompressedTexture2D::7069853989031671510::1700841570::1700842389::1::::<><>::
@@ -63,13 +63,21 @@ NPC_640.png::CompressedTexture2D::8374560791215870293::1700841674::1700852920::1
 pickaxe.png::CompressedTexture2D::6864266797710452554::1700845017::1700845026::1::::<><>::
 tree.png::CompressedTexture2D::1025680778197721908::1700852473::1700852474::1::::<><>::
 Wizard_Default.png::CompressedTexture2D::5570135213623520257::1700843305::1700843306::1::::<><>::
-::res://music/::1700844710
-::res://scenes/::1700855069
-character.tscn::PackedScene::3629785941848655487::1700855069::0::1::::<><>::res://scritps/character.gd<>uid://clmhkwaq52h6p::::res://assets/Wizard_Default.png<>uid://c42dqa2btjsbi::::res://assets/pickaxe.png
-zombie.tscn::PackedScene::6994735059517842584::1700855069::0::1::::<><>::uid://cs4k5s7v1052i::::res://assets/NPC_223.png<>res://scritps/zombie.gd
-terraria.tscn::PackedScene::749235949605420691::1700855069::0::1::::<><>::res://scritps/world_gen/world_gen.gd<>uid://doroin3s4nwup::::res://assets/dirt_sprite_shit.png<>uid://ou32vk8kbjrg::::res://assets/tree.png<>uid://brykbrbbcdouh::::res://scenes/character.tscn<>uid://byn8ikj37t1fg::::res://assets/Background_171.png<>uid://c7yxpynqogu6y::::res://assets/Background_277.png<>uid://c8cbefgmfw3tf::::res://assets/Background_278.png<>uid://c6wki80nckw05::::res://scenes/zombie.tscn
-::res://scritps/::1700855067
-character.gd::GDScript::-1::1700854747::0::1::::<>CharacterBody2D<>::
-zombie.gd::GDScript::-1::1700855067::0::1::::<>CharacterBody2D<>::
-::res://scritps/world_gen/::1700852173
-world_gen.gd::GDScript::-1::1700852173::0::1::::<>Node2D<>::
+::res://data/::1700855966
+normal_panel.tres::StyleBoxFlat::2831192256077181064::1700855966::0::1::::<><>::
+selected_panel.tres::StyleBoxFlat::8685328679080458489::1700855963::0::1::::<><>::
+::res://music/::1700858432
+zombie_death.mp3::AudioStreamMP3::2356976167091036642::1700858428::1700858432::1::::<><>::
+zombie_ow.mp3::AudioStreamMP3::7979398834762598823::1700858415::1700858432::1::::<><>::
+::res://scenes/::1700857998
+canvas_layer.tscn::PackedScene::4330531735384654887::1700857998::0::1::::<><>::res://scritps/canvas_layer.gd<>uid://dv0idhem4mnif::::res://data/selected_panel.tres<>uid://blfo2eijshsxk::::res://assets/Item_3490.png<>uid://s6c41idw7fl7::::res://assets/Item_3491.png<>uid://bglpk8f6uwnyu::::res://data/normal_panel.tres<>uid://doroin3s4nwup::::res://assets/dirt_sprite_shit.png
+character.tscn::PackedScene::3629785941848655487::1700857998::0::1::::<><>::res://scritps/character.gd<>uid://clmhkwaq52h6p::::res://assets/Wizard_Default.png<>uid://blfo2eijshsxk::::res://assets/Item_3490.png<>uid://b2x0hwc0eg06v::::res://scenes/canvas_layer.tscn
+terraria.tscn::PackedScene::749235949605420691::1700857998::0::1::::<><>::res://scritps/world_gen/world_gen.gd<>uid://doroin3s4nwup::::res://assets/dirt_sprite_shit.png<>uid://ou32vk8kbjrg::::res://assets/tree.png<>uid://brykbrbbcdouh::::res://scenes/character.tscn<>uid://byn8ikj37t1fg::::res://assets/Background_171.png<>uid://c7yxpynqogu6y::::res://assets/Background_277.png<>uid://c8cbefgmfw3tf::::res://assets/Background_278.png<>uid://c6wki80nckw05::::res://scenes/zombie.tscn
+zombie.tscn::PackedScene::6994735059517842584::1700857998::0::1::::<><>::uid://cs4k5s7v1052i::::res://assets/NPC_223.png<>res://scritps/zombie.gd
+::res://scritps/::1700857996
+canvas_layer.gd::GDScript::-1::1700857773::0::1::::<>CanvasLayer<>::
+character.gd::GDScript::-1::1700857807::0::1::::<>CharacterBody2D<>::
+EventBus.gd::GDScript::-1::1700857678::0::1::::<>Node<>::
+zombie.gd::GDScript::-1::1700857996::0::1::::<>CharacterBody2D<>::
+::res://scritps/world_gen/::1700857406
+world_gen.gd::GDScript::-1::1700857406::0::1::::<>Node2D<>::
