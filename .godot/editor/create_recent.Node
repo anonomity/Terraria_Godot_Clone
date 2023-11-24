@@ -1,0 +1,6 @@
+CollisionShape2D
+ColorRect
+CharacterBody2D
+Camera2D
+TextureRect
+TileMap

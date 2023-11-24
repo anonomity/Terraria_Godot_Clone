@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://kw62opumwkfr"]
+
+[ext_resource type="Script" path="res://scritps/world_gen/world_gen.gd" id="1_sekn6"]
+[ext_resource type="Texture2D" uid="uid://pck14lo1u332" path="res://assets/dirt_sprite_shit.png" id="2_j7vfd"]
+[ext_resource type="PackedScene" uid="uid://brykbrbbcdouh" path="res://scenes/character.tscn" id="3_nuktr"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_g6b25"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fob1d"]
+noise = SubResource("FastNoiseLite_g6b25")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hkb7f"]
+texture = ExtResource("2_j7vfd")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.45901, -2.71724, -6.36993, -2.1827, -5.21176, -0.579084, -5.65721, 0.668174, -6.6372, 8, -6.72628, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, -8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -8, 8, 8)
+
+[sub_resource type="TileSet" id="TileSet_rf7n8"]
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.898039, 0.14902, 0.203922, 1)
+sources/0 = SubResource("TileSetAtlasSource_hkb7f")
+
+[node name="Terraria" type="Node2D"]
+script = ExtResource("1_sekn6")
+noise_image = SubResource("NoiseTexture2D_fob1d")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_rf7n8")
+format = 2
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_nuktr")]
+position = Vector2(276, 2)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-2, -29)

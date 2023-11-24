@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://brykbrbbcdouh"]
+
+[ext_resource type="Script" path="res://scritps/character.gd" id="1_cvc0e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_58tw6"]
+radius = 15.0
+height = 56.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(325, -382)
+script = ExtResource("1_cvc0e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -19.0
+offset_top = -56.0
+offset_right = 21.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -30)
+shape = SubResource("CapsuleShape2D_58tw6")
