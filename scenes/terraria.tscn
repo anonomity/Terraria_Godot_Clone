@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://kw62opumwkfr"]
+[gd_scene load_steps=14 format=3 uid="uid://kw62opumwkfr"]
 
 [ext_resource type="Script" path="res://scritps/world_gen/world_gen.gd" id="1_sekn6"]
 [ext_resource type="Texture2D" uid="uid://doroin3s4nwup" path="res://assets/dirt_sprite_shit.png" id="2_j7vfd"]
@@ -11,6 +11,18 @@
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fob1d"]
 noise = SubResource("FastNoiseLite_g6b25")
+
+[sub_resource type="Gradient" id="Gradient_k2ene"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.405405)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yk02u"]
+frequency = 0.015
+fractal_gain = -0.045
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p8lrv"]
+color_ramp = SubResource("Gradient_k2ene")
+noise = SubResource("FastNoiseLite_yk02u")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hkb7f"]
 texture = ExtResource("2_j7vfd")
@@ -60,6 +72,12 @@ texture = ExtResource("2_j7vfd")
 4: [0],
 "type": 0
 }
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_rf7n8"]
 physics_layer_0/collision_layer = 1
@@ -77,10 +95,12 @@ metadata/_better_terrain = {
 [node name="Terraria" type="Node2D"]
 script = ExtResource("1_sekn6")
 noise_image = SubResource("NoiseTexture2D_fob1d")
+cave_text = SubResource("NoiseTexture2D_p8lrv")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rf7n8")
 format = 2
+layer_1/tile_data = PackedInt32Array()
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_nuktr")]
 position = Vector2(276, 2)
