@@ -22,6 +22,7 @@ var back_layer = 0
 
 enum TOOL_TYPE {SWORD, PICKAXE, DIRT, NONE}
 var current_tool = TOOL_TYPE.SWORD
+var trigger_mouse_button = [];
 
 func _ready():
 	EventBus.have_sword.connect(on_sword_connect)
@@ -82,15 +83,31 @@ func on_dirt_connect():
 	current_tool = TOOL_TYPE.DIRT
 
 func _input(event):
-	if Input.is_action_just_pressed("click") and current_tool == TOOL_TYPE.PICKAXE:
-		var mouse_pos = get_global_mouse_position()
-		var tile_pos = tile_map.local_to_map(mouse_pos)
-		var index = BetterTerrain.get_cell(tile_map, front_layer, tile_pos)
-		if index != -1:
-			tile_map.erase_cell(front_layer, tile_pos)
-			#tile_arr.erase(tile_pos)
-			BetterTerrain.update_terrain_cell(tile_map, front_layer,tile_pos,true )
-	if Input.is_action_pressed("right_click")  and current_tool == TOOL_TYPE.DIRT:
-		var mouse_pos = get_global_mouse_position()
-		var tile_pos = tile_map.local_to_map(mouse_pos)
-		tile_map.set_cell(front_layer, tile_pos, 0,dirt_atlas)
+	var mouse_pos = get_global_mouse_position()
+	var tile_pos = tile_map.local_to_map(mouse_pos)
+	
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			trigger_mouse_button.append(event.button_index)
+		else:
+			trigger_mouse_button.erase(event.button_index)
+
+	if trigger_mouse_button.has(MOUSE_BUTTON_LEFT) and current_tool == TOOL_TYPE.PICKAXE:
+		
+		if distance_action_allowed(mouse_pos, tile_pos):
+			if BetterTerrain.get_cell(tile_map, front_layer, tile_pos) != BetterTerrain.TileCategory.ERROR:
+				tile_map.erase_cell(front_layer, tile_pos)
+				#tile_arr.erase(tile_pos)
+				BetterTerrain.update_terrain_cell(tile_map, front_layer,tile_pos,true)
+
+	if trigger_mouse_button.has(MOUSE_BUTTON_RIGHT) and current_tool == TOOL_TYPE.DIRT:
+		if distance_action_allowed(mouse_pos, tile_pos):
+			tile_map.set_cell(front_layer, tile_pos, 0,dirt_atlas)
+
+func distance_action_allowed(mouse_pos, tile_pos, max_distance = 100) -> bool:
+	var mouse_distance = mouse_pos.distance_to(Vector2(global_position.x, global_position.y))
+	
+	if mouse_distance <= max_distance:
+		return true;
+	
+	return false;
