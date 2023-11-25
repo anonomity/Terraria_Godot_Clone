@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://kw62opumwkfr"]
 
-[ext_resource type="Script" path="res://scritps/world_gen/world_gen.gd" id="1_sekn6"]
+[ext_resource type="Script" path="res://scripts/world_gen/world_gen.gd" id="1_sekn6"]
 [ext_resource type="Texture2D" uid="uid://doroin3s4nwup" path="res://assets/dirt_sprite_shit.png" id="2_j7vfd"]
 [ext_resource type="Texture2D" uid="uid://ou32vk8kbjrg" path="res://assets/tree.png" id="3_340ap"]
 [ext_resource type="PackedScene" uid="uid://brykbrbbcdouh" path="res://scenes/character.tscn" id="3_nuktr"]
@@ -287,7 +287,19 @@ ore_text = SubResource("NoiseTexture2D_bgj8x")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rf7n8")
 format = 2
+layer_1/name = ""
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
+layer_2/name = ""
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
 
 [node name="CharacterBody2D" parent="." node_paths=PackedStringArray("tile_map") instance=ExtResource("3_nuktr")]

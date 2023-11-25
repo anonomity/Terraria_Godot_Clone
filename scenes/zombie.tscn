@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://c6wki80nckw05"]
 
 [ext_resource type="Texture2D" uid="uid://cs4k5s7v1052i" path="res://assets/NPC_223.png" id="1_23jl4"]
-[ext_resource type="Script" path="res://scritps/zombie.gd" id="1_bi0k2"]
+[ext_resource type="Script" path="res://scripts/zombie.gd" id="1_bi0k2"]
 [ext_resource type="AudioStream" uid="uid://dlxjsefge0ndf" path="res://music/zombie_ow.mp3" id="3_5f5xb"]
 [ext_resource type="AudioStream" uid="uid://8t0b2ntowg55" path="res://music/zombie_death.mp3" id="4_ntdly"]
 
@@ -58,10 +58,10 @@ vframes = 3
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "walk"
 libraries = {
 "": SubResource("AnimationLibrary_rudog")
 }
-autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 11)

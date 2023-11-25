@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Terraria"
-config/features=PackedStringArray("4.2", "Forward Plus")
+run/main_scene="res://scenes/terraria.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
-EventBus="*res://scritps/EventBus.gd"
+EventBus="*res://scripts/EventBus.gd"
 
 [display]
 
