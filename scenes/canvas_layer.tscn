@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2x0hwc0eg06v"]
 
-[ext_resource type="Script" path="res://scritps/canvas_layer.gd" id="1_es2wb"]
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="1_es2wb"]
 [ext_resource type="StyleBox" uid="uid://dv0idhem4mnif" path="res://data/selected_panel.tres" id="1_syt55"]
 [ext_resource type="Texture2D" uid="uid://blfo2eijshsxk" path="res://assets/Item_3490.png" id="1_xaruh"]
 [ext_resource type="Texture2D" uid="uid://s6c41idw7fl7" path="res://assets/Item_3491.png" id="2_102pb"]
