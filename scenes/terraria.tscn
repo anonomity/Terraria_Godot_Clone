@@ -264,8 +264,8 @@ texture = ExtResource("3_340ap")
 
 [sub_resource type="TileSet" id="TileSet_rf7n8"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_hkb7f")
 sources/1 = SubResource("TileSetAtlasSource_x1xxr")
+sources/0 = SubResource("TileSetAtlasSource_hkb7f")
 metadata/_better_terrain = {
 "decoration": ["Decoration", Color(0.411765, 0.411765, 0.411765, 1), 3, [], {
 "path": "res://addons/better-terrain/icons/Decoration.svg"
