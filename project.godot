@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
 EventBus="*res://scripts/EventBus.gd"
+BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
 
 [display]
 
